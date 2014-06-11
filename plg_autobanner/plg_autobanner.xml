@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - Auto banner</name>
+	<author>AnV</author>
+	<creationDate>January 2011</creationDate>
+	<copyright>(C) 2011 - anvweb.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@anvweb.com</authorEmail>
+	<authorUrl>www.anvweb.com</authorUrl>
+	<version>1.0</version>
+	<description>Plugin "Auto banner" automatically inserts banners into articles depending on text paragraphs. Developed by www.anvweb.com v1.0.</description>
+	<files>
+		<filename plugin="plg_autobanner">plg_autobanner.php</filename>
+		<folder>plg_autobanner/elements</folder>
+		<folder>plg_autobanner/helpers</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_plg_autobanner.ini</language>
+	</languages>
+	<params addpath="/plugins/content/plg_autobanner/elements">
+		<param name="paragraph_divider" type="text" default="" label="PARAGRAPH DIVIDERS" description="TAGS, THAT DIVIDES PARAGRAPHS" />							
+		<param name="paragraph_list" type="paragraphlist" style="width:95%;" class="inputbox" multiple="multiple" default="4" label="SELECT PARAGRAPHS"  description="SELECT APPROPRIATE PARAGRAPHS" />
+		<param name="top_banner_divider" type="text" default="" label="TOP BANNER DIVIDER" description="DIVIDE BANNER FROM TOP TEXT" />
+		<param name="bot_banner_divider" type="text" default="" label="BOTTOM BANNER DIVIDER" description="DIVIDE BANNER FROM BOTTOM TEXT" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="banner_client" type="bannerclientlist" style="width:95%;" class="inputbox" default="" label="BANNER CLIENTS"  description="SELECT APPROPRIATE BANNER CLIENTS" />
+		<param name="banner_category" type="bannercategorylist" style="width:95%;" class="inputbox" default="" label="SELECT BANNER CATEGORIES" description="SELECT APPROPRIATE BANNER CATEGORIES" />				
+		<param name="banner_randomise" type="list" default="" label="RANDOMISE" description="RANDOMISE THE ORDERING OF THE BANNERS">
+  			<option value="0">STICKY ORDERING</option>
+  			<option value="1">STICKY RANDOMISE</option>
+		</param>			
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="content_section_list" type="contentsectionlist" style="width:95%;" class="inputbox" multiple="multiple" default="" label="CONTENT SECTIONS" description="SELECT APPROPRIATE CONTENT SECTIONS" />
+		<param name="content_category_list" type="contentcategorylist" style="width:95%;" class="inputbox" multiple="multiple" default="" label="CONTENT CATEGORIES" description="SELECT APPROPRIATE CONTENT CATEGORIES" />	
+	</params>
+	<params group="advanced">
+		<param name="ban_on_frontpage" type="radio" default="0" label="SHOW BANNERS ON FRONTPAGE" description="CHECK YES IF YOU WOULD LIKE TO SEE BANNERS ON FRONTPAGE">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>			
+</install>
+
